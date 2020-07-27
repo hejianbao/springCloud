@@ -1,6 +1,6 @@
 package com.example.springclouddemocousumer.controller;
 
-import com.example.springclouddemocousumer.service.ProductService;
+import com.example.springclouddemocousumer.service.ProductClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConsumerController {
     @Autowired
-    private ProductService productService;
+    private ProductClientService productClientService;
 
     @RequestMapping(value = "getConsumer")
     public String getConsumer(){
-        String str =  productService.getProduct();
+        String str =  productClientService.getProduct();
         return str;
     }
 }

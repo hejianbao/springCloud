@@ -6,19 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springclouddemo-entity" />
-        <module name="springclouddemo-cousumer" />
-        <module name="springclouddemo" />
-        <module name="springclouddemo-product" />
         <module name="springclouddemo-eureka" />
+        <module name="springclouddemo-zuul-gateway" />
+        <module name="springclouddemo-cousumer" />
+        <module name="springclouddemo-config" />
+        <module name="springclouddemo-product" />
+        <module name="springclouddemo-entity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springclouddemo" target="1.8" />
+      <module name="springclouddemo-config" target="1.8" />
       <module name="springclouddemo-cousumer" target="1.8" />
       <module name="springclouddemo-entity" target="1.8" />
       <module name="springclouddemo-eureka" target="1.8" />
       <module name="springclouddemo-product" target="1.8" />
+      <module name="springclouddemo-zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

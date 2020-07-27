@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springclouddemo.iml" filepath="$PROJECT_DIR$/springclouddemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springclouddemo-config/springclouddemo-config.iml" filepath="$PROJECT_DIR$/springclouddemo-config/springclouddemo-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/springclouddemo-cousumer/springclouddemo-cousumer.iml" filepath="$PROJECT_DIR$/springclouddemo-cousumer/springclouddemo-cousumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springclouddemo-entity/springclouddemo-entity.iml" filepath="$PROJECT_DIR$/springclouddemo-entity/springclouddemo-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/springclouddemo-eureka/springclouddemo-eureka.iml" filepath="$PROJECT_DIR$/springclouddemo-eureka/springclouddemo-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/springclouddemo-product/springclouddemo-product.iml" filepath="$PROJECT_DIR$/springclouddemo-product/springclouddemo-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springclouddemo-zuul-gateway/springclouddemo-zuul-gateway.iml" filepath="$PROJECT_DIR$/springclouddemo-zuul-gateway/springclouddemo-zuul-gateway.iml" />
     </modules>
   </component>
 </project>

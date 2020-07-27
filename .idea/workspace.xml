@@ -8,6 +8,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -15,6 +18,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -26,6 +32,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1fFTLvmIROYLJsHxf7hTwj0OBSq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -38,7 +45,10 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.37302977" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,6 +66,16 @@
     <configuration name="SpringclouddemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springclouddemo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemo.SpringclouddemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringclouddemoConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springclouddemo-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemoconfig.SpringclouddemoConfigApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -63,6 +83,9 @@
     <configuration name="SpringclouddemoCousumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springclouddemo-cousumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemocousumer.SpringclouddemoCousumerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -70,6 +93,9 @@
     <configuration name="SpringclouddemoEntityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springclouddemo-entity" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemoentity.SpringclouddemoEntityApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,6 +103,9 @@
     <configuration name="SpringclouddemoEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springclouddemo-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemoeureka.SpringclouddemoEurekaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,10 +113,29 @@
     <configuration name="SpringclouddemoProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springclouddemo-product" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemoproduct.SpringclouddemoProductApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringclouddemoZuulGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springclouddemo-zuul-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springclouddemozuulgateway.SpringclouddemoZuulGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SpringclouddemoApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoCousumerApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoEntityApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoEurekaApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoProductApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoZuulGatewayApplication" />
+      <item itemvalue="Spring Boot.SpringclouddemoConfigApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\HL\AppData\Roaming\Subversion</configuration>
@@ -99,11 +147,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595812788140</updated>
-      <workItem from="1595812798038" duration="4110000" />
+      <workItem from="1595812798038" duration="19837000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
