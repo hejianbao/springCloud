@@ -1,0 +1,7 @@
+com\example\springclouddemoaccount\controller\AccountController.class
+com\example\springclouddemoaccount\SpringclouddemoAccountApplication.class
+com\example\springclouddemoaccount\service\AccountService.class
+com\example\springclouddemoaccount\mapper\AccountMapper.class
+com\example\springclouddemoaccount\service\impl\AccountServiceImpl.class
+com\example\springclouddemoaccount\entity\Account.class
+com\example\springclouddemoaccount\service\fallBack\AccountServiceFallBack.class

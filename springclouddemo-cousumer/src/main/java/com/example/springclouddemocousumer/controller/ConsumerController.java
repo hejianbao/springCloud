@@ -22,4 +22,18 @@ public class ConsumerController {
         String str =  productClientService.getProduct();
         return str;
     }
+
+    /**
+     * @description 获取表中数据
+     * @author hejianbao
+     * @date 2020/7/28 0028 16:25
+     * @param
+     * @return
+     * @throws
+     */
+    @RequestMapping(value = "getConfig")
+    public String getConfig() {
+        String str = productClientService.getConfig();
+        return str;
+    }
 }

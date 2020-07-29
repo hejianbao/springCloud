@@ -8,8 +8,8 @@
 #alibaba.cloud.secret-key=****
 server:
   port: 6001
-  servlet:
-    context-path: /apigateway
+#  servlet:
+#    context-path: /apigateway
 #服务的名称
 spring:
   application:
@@ -27,9 +27,21 @@ ribbon:
 #自定义路由映射
 zuul:
   routes:
-    consumer-services: /zuulConsumer/**
-    product-services: /zuulProduct/**
+    account-services.serviceId: account-services
+    account-services.path: /zuulAccount/**
+#    consumer-services: /zuulConsumer/**
+#    product-services: /zuulProduct/**
   #统一入口为上面的配置，其他入口忽略
-  ignored-patterns: /*-services/**
+ # ignored-patterns: /*-services/**
   #忽略整个服务，对外提供接口
-  ignored-services: consumer-services
+  ignored-services: "*"
+  prefix: /apigateway
+
+  #zuul.routes.product.path=/prd/**
+  #zuul.routes.product.serviceId=product-service
+
+  #zuul.routes.pay.path=/pay/**
+  #zuul.routes.pay.serviceId=payment-service
+
+  #zuul.routes.order.path=/order/**
+  #zuul.routes.order.serviceId=order-service

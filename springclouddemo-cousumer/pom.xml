@@ -29,12 +29,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.example</groupId>
             <artifactId>springclouddemo-entity</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <!--  添加springboot fegin依赖，product项目即可以作为生产者，又可以作为消费者-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

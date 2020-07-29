@@ -1,0 +1,54 @@
+#spring.application.name=springclouddemo-account
+#management.endpoints.jmx.exposure.include=*
+#management.endpoints.web.exposure.include=*
+#management.endpoint.health.show-details=always
+## spring cloud access&secret config
+## 可以访问如下地址查看: https://usercenter.console.aliyun.com/#/manage/ak
+#alibaba.cloud.access-key=****
+#alibaba.cloud.secret-key=****
+server:
+  port: 4001
+  servlet:
+    context-path: /account
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5060/eureka/eureka
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 2000
+
+spring:
+  application:
+    name: account-services
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+#    initialSize: 1
+#    minIdle: 1
+#    maxIdle: 5
+#    maxActive: 50
+#    maxWait: 10000
+#    timeBetweenEvictionRunsMillis: 10000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: select 'x'
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxOpenPreparedStatements: 20
+#    filters: stat
+
+#扫描实体类
+mybatis:
+  type-aliases-package: com.example.springclouddemoaccount.entity
+  mapper-locations: classpath:mapperXml/*.xml
+

@@ -1,6 +1,6 @@
 package com.example.springclouddemocousumer.service;
 
-import com.example.springclouddemocousumer.service.impl.ProductClientFallback;
+import com.example.springclouddemocousumer.service.fallBack.ProductClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,4 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface ProductClientService {
     @RequestMapping(value = "getProduct")
     String getProduct();
+
+    @RequestMapping(value = "getConfig")
+    String getConfig();
 }

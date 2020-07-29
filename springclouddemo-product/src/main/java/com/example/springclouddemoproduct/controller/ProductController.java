@@ -1,14 +1,15 @@
 package com.example.springclouddemoproduct.controller;
 
 import com.example.springclouddemoentity.entity.Product;
+import com.example.springclouddemoproduct.entity.ConfigService;
+import com.example.springclouddemoproduct.service.ProductService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 /**
  * @Classname ProductController
@@ -22,6 +23,8 @@ public class ProductController {
     //添加bean
     /*@Autowired
     private StringRedisTemplate redisTemplate;*/
+    @Autowired
+    private ProductService productService;
 
     @RequestMapping(value = "getProduct")
     //当调用微服务出现异常会降级到getProduct1方法中
@@ -30,6 +33,8 @@ public class ProductController {
         Product product = new Product();
         return product.toString();
     }
+
+
 
     //注意，方法签名一定要要和api方法一致
     private String getProduct1(HttpServletRequest request){
@@ -54,4 +59,19 @@ public class ProductController {
         //这对gai该接口进行一些逻辑降级处理........
         return "请停止controller服务";
     }
+
+    /**
+     * @description 获取配置参数
+     * @author hejianbao
+     * @date 2020/7/28 0028 16:29
+     */
+    @RequestMapping(value = "getConfig")
+    //当调用微服务出现异常会降级到getProduct1方法中
+    @HystrixCommand(fallbackMethod = "getProduct1")
+    public String getConfig() {
+        List<ConfigService> list = productService.getConfig();
+        System.out.println(list.toString());
+        return list.toString();
+    }
+
 }

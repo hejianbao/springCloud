@@ -11,24 +11,62 @@ server:
   port: 5001
 
 #连接配置信息
-spring:
-  application:
-    name: config-server-jdbc
-  profiles:
-    active: jdbc
-  cloud:
-    config:
-      server:
-        default-label: dev
-        jdbc:
-          sql: SELECT akey , avalue FROM config_server where APPLICATION=? and APROFILE=? and LABEL=?
-  #####################################################################################################
+#spring:
+#  application:
+#    name: config-services-jdbc
+#  profiles:
+#    active: jdbc
+#  cloud:
+#    config:
+#      server:
+#        default-label: dev
+#        jdbc:
+#          sql: SELECT akey , avalue FROM config_server where APPLICATION=? and APROFILE=? and LABEL=?
+#  #####################################################################################################
   # mysql 属性配置
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/test
-    username: root
-    password: root
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/test
+#    username: root
+#    password: root
+#扫描实体类
+#mybatis:
+#  type-aliases-package: com.example.springclouddemoproduct.entity
+#扫描映射文件
+#  mapper-locations: classpath:springclouddemo-product.mapperXml/*.xml
+
+#  jpa:
+#    generate-ddl: false
+#    hibernate:
+#      ddl-auto: none
+#    database: mysql
+#    show-sql: false
+#  resources:
+#    chain:
+#      strategy:
+#        content:
+#          enabled: true
+#          paths: /**
+#
+##druid connect pool
+#db:
+#  druid:
+#    url: ${spring.datasource.url}
+#    username: ${spring.datasource.username}
+#    password: ${spring.datasource.password}
+#    filters: stat,wall
+#    max-active: 60
+#    initial-size: 10
+#    max-wait: 60000
+#    min-idle: 10
+#    time-between-eviction-runs-millis: 600000
+#    min-evictable-idle-time-millis: 300000
+#    test-while-idle: true
+#    test-on-borrow: false
+#    test-on-return: false
+#    pool-prepared-statements: false
+#    max-open-prepared-statements: 20
+
 #####################################################################################################
 
 #指定注册中心地址

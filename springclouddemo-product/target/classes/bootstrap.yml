@@ -1,21 +1,29 @@
-#指定注册中心地址
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:5060/eureka/eureka
+##指定注册中心地址
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:5060/eureka/eureka
+#
+##服务的名称
+#spring:
+#  application:
+#    name: product-services
+#  #指定从哪个配置中心读取
+#  cloud:
+#    config:
+#      discovery:
+#        service-id: config-services-jdbc
+#        enabled: true
+#      profile: dev
+#      label: dev
+#
+#server:
+#  port: 8001
 
-#服务的名称
-spring:
-  application:
-    name: product-services
-  #指定从哪个配置中心读取
-  cloud:
-    config:
-      discovery:
-        service-id: config-server-jdbc
-        enabled: true
-      profile: dev
-      label: dev
-
-server:
-  port: 8001
+#消息队列
+#spring:
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest

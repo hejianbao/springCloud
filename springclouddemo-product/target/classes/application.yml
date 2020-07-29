@@ -6,9 +6,6 @@
 ## 可以访问如下地址查看: https://usercenter.console.aliyun.com/#/manage/ak
 #alibaba.cloud.access-key=****
 #alibaba.cloud.secret-key=****
-spring:
-  application:
-    name: product-services
 #    redis:
 #      database: 0
 #      host: 127.0.0.1
@@ -25,3 +22,18 @@ eureka:
       #实际上属性应该是service-url,这个属性是个map（key-value）格式；当key是defaultZone的时候才能被解析；所以这里没有提示，
       #但是自己还需要写一个defaultZone；
       defaultZone: http://localhost:5060/eureka/eureka
+#连接配置信息
+spring:
+  application:
+    name: product-services
+  # mysql 属性配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+#扫描实体类
+mybatis:
+  type-aliases-package: com.example.springclouddemoproduct.entity
+  #扫描映射文件
+  mapper-locations: classpath:mapperXml/*.xml

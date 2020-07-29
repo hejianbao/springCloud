@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springclouddemoproduct.mapper.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.example.springclouddemoproduct.entity.ConfigService">
+        <result column="id" property="id" jdbcType="NUMERIC"/>
+        <result column="akey" property="akey" jdbcType="VARCHAR"/>
+        <result column="avalue" property="avalue" jdbcType="VARCHAR"/>
+        <result column="application" property="application" jdbcType="VARCHAR"/>
+        <result column="aprofile" property="aprofile" jdbcType="VARCHAR"/>
+        <result column="label" property="label" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id,akey,avalue,application,aprofile,label
+  </sql>
+    <select id="listConfig" resultMap="BaseResultMap" parameterType="java.util.Map">
+        select
+        <include refid="Base_Column_List"/>
+        from config_server
+       <!-- <trim prefix="where" prefixOverrides="and |or">
+            <if test="personalNumber != null">
+                and PERSONALNUMBER = #{personalNumber,jdbcType=VARCHAR}
+            </if>
+        </trim>-->
+    </select>
+    <!--<update id="updateJzzp" parameterType="cn.com.itsea.entity.YW_JZZP">
+        update YW_JZZP
+        set
+        <if test="xm != null and xm != ''">
+            XM = #{xm,jdbcType=VARCHAR},
+        </if>
+        <if test="sbkh != null and sbkh != ''">
+            SBKH = #{sbkh,jdbcType=VARCHAR},
+        </if>
+        <if test="sfzh != null and sfzh != ''">
+            SFZH = #{sfzh,jdbcType=VARCHAR},
+        </if>
+        <if test="tzzztTemp != null and tzzztTemp!= ''">
+            TZZZT_TEMP = #{tzzztTemp,jdbcType=NUMERIC},
+        </if>
+        <if test="zplj != null and zplj!= ''">
+            ZPLJ = #{zplj,jdbcType=VARCHAR},
+        </if>
+        <if test="tzzZt != null and tzzZt!= ''">
+            TZZZT = #{tzzZt,jdbcType=NUMERIC},
+        </if>
+        GXSJ = #{gxsj,jdbcType=DATE}
+        where ZPID = #{zpid,jdbcType=CHAR}
+    </update>
+
+    <insert id="saveJzzp" parameterType="cn.com.itsea.entity.YW_JZZP" >
+        <selectKey keyProperty="zpid" order="BEFORE" resultType="java.lang.String">
+            select SYS_GUID() as zpid from DUAL
+        </selectKey>
+        insert into YW_JZZP ( ZPID,SFZH,SBKH,XM,ZPLJ,TJSJ,SFYX,SFYGXR,BZ,GXZPLJ,GXSJ,TZZZT,FZZD,TZZZT_TEMP,PERSONALNUMBER )
+        values ( #{zpid,jdbcType=CHAR},#{sfzh,jdbcType=VARCHAR},#{sbkh,jdbcType=VARCHAR}, #{xm,jdbcType=VARCHAR},#{zplj,jdbcType=VARCHAR},
+        #{tjsj,jdbcType=DATE}, #{sfyx,jdbcType=NUMERIC}, #{sfygxr,jdbcType=NUMERIC},#{bz,jdbcType=VARCHAR},
+        #{gxzpLj,jdbcType=VARCHAR},#{gxsj,jdbcType=DATE},#{tzzZt,jdbcType=NUMERIC},#{fzzd,jdbcType=NUMERIC},#{tzzztTemp,jdbcType=NUMERIC},
+        #{personalNumber,jdbcType=VARCHAR} )
+    </insert>-->
+</mapper>
